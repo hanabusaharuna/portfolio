@@ -206,13 +206,14 @@ _____________________________________________________________*/
       border-color: #7fffd4;
       left: 0;
       top: 15px; }
-@imclude sp {
-  .mine .pc {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0; } }
+    @media (max-width: 375px) {
+      .mine .pc {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0; } }
+
 /*skil */
 .skil {
   margin-top: 30px; }
@@ -238,12 +239,12 @@ _____________________________________________________________*/
 /* gallery
 _____________________________________________________________*/
 .gallery {
-  columns: 1;
+  columns: 3;
   /*段組みの数*/
   padding: 0 15px;
   /*ギャラリー左右に余白をつける*/
   margin: 0; }
-  @media (max-width: 375px) {
+  @media (max-width: 900px) {
     .gallery {
       columns: 3;
       /*段組みの数*/ } }
@@ -265,8 +266,8 @@ _____________________________________________________________*/
 
 /*もっと見る*/
 .more {
-  background: #0058B0;
-  color: #fff;
+  background: #fff100;
+  color: #222;
   width: 200px;
   text-align: center;
   padding: 5px;
