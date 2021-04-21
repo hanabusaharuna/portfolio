@@ -1,0 +1,300 @@
+@charset "UTF-8";
+/*共通設定
+______________________________________________*/
+/*画面全体の設定*/
+body,
+html {
+  height: 100%;
+  margin: 0 auto;
+  letter-spacing: 2px; }
+
+/*  基本レイアウト*/
+html {
+  font-size: 1em;
+  font-family: sans-serif;
+  color: #282626; }
+
+.col-8, .col-sm-10 {
+  margin: 0 auto; }
+
+a {
+  color: #282626;
+  text-decoration: none; }
+  a :hover {
+    color: #444444; }
+
+h2 {
+  position: relative;
+  padding: 1rem 2rem calc(1rem + 10px);
+  background: #fff100;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: 'Dela Gothic One', cursive; }
+
+h2:before {
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  width: 100%;
+  height: 100%;
+  content: '';
+  border: 4px solid #000; }
+
+footer {
+  text-align: center; }
+
+/*固定する背景*/
+/* .menu-btn 設定　ここから */
+.wrapper {
+  display: inline-block;
+  right: 50px;
+  margin: 10px 10px 0 0; }
+
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn2 {
+  position: fixed;
+  /*ボタン内側の基点となるためrelativeを指定*/
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  top: 10px;
+  right: 10px;
+  z-index: 9999; }
+
+/*ボタン内側*/
+.openbtn2 span {
+  display: inline-block;
+  transition: all .4s;
+  /*アニメーションの設定*/
+  position: absolute;
+  left: 13px;
+  height: 2px;
+  background-color: #666; }
+
+.openbtn2 span:nth-of-type(1) {
+  top: 22px;
+  width: 50%; }
+
+.openbtn2 span:nth-of-type(2) {
+  top: 29px;
+  width: 30%; }
+
+/*activeクラスが付与されると線が回転して×に*/
+.openbtn2.active span:nth-of-type(1) {
+  top: 20px;
+  left: 16px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 35%; }
+
+.openbtn2.active span:nth-of-type(2) {
+  top: 32px;
+  left: 16px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 35%; }
+
+/*========= レイアウトのためのCSS ===============*/
+.lead {
+  margin: 20px 0 0 0; }
+
+.btn-block {
+  width: 200px;
+  padding: 30px; }
+
+/* .menu-btn 設定　ここまで */
+/*========= ナビゲーションのためのCSS ===============*/
+#gnav {
+  /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
+  position: fixed;
+  z-index: -1;
+  opacity: 0;
+  /*はじめは透過0*/
+  /*ナビの位置と形状*/
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  /*ナビの高さ*/
+  background: rgba(175, 170, 160, 0.8);
+  /*動き*/
+  transition: all 0.3s; }
+
+/*アクティブクラスがついたら透過なしにして最前面へ*/
+#gnav.panelactive {
+  opacity: 1;
+  z-index: 999; }
+
+/*ナビゲーションの縦スクロール*/
+#gnav.panelactive #g-nav-list {
+  /*ナビの数が増えた場合縦スクロール*/
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  /*表示する高さ*/
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
+
+/*ナビゲーション*/
+#gnav ul {
+  display: none;
+  /*ナビゲーション天地中央揃え*/
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+#gnav.panelactive ul {
+  display: block; }
+
+/*リストのレイアウト設定*/
+#gnav li {
+  list-style: none;
+  text-align: center; }
+
+#gnav li a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold; }
+
+/* nav 設定　ここまで */
+/* profile
+_____________________________________________________________*/
+.mine {
+  margin: 0 auto;
+  display: block; }
+  .mine__wrapper {
+    font-family: 'Noto Serif JP', serif; }
+    @media (min-width: 768px) {
+      .mine__wrapper {
+        width: 100%;
+        margin: 0 0 65px;
+        display: flex; } }
+  .mine__r {
+    margin: 0 auto; }
+    @media (min-width: 768px) {
+      .mine__r {
+        width: 100%;
+        margin: 80px 0 0 30px; } }
+@imclude pc {
+  .mine__copy {
+    display: inline-block;
+    margin-top: 80px;
+    margin-left: 50%;
+    font-size: 2em;
+    font-family: 'Noto Serif JP', serif; } }
+@imclude pc {
+  .mine__text {
+    width: 80%;
+    margin-top: 30px;
+    margin-left: 300px;
+    font-size: 13px;
+    line-height: 2.4;
+    font-family: 'Noto Serif JP', serif; } }
+  .mine__l {
+    text-align: center;
+    position: relative; }
+  .mine .pc {
+    margin-bottom: 50px;
+    height: 250px; }
+    .mine .pc .pc::after {
+      content: '';
+      position: absolute;
+      width: 69.9%;
+      border-color: #7fffd4;
+      left: 0;
+      top: 15px; }
+@imclude pc {
+  .mine .pc {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; } }
+/*skil */
+.skil {
+  margin-top: 30px; }
+  .skil__container {
+    margin: 30px auto 0; }
+    .skil__container:first-child {
+      margin-top: 0; }
+    .skil__container .row {
+      margin: 0 auto; }
+  .skil .col-lg-2 offset-lg-1 col-sm-3 offset-sm-1 col-4 offset-4 {
+    text-align: center; }
+  .skil__text {
+    text-align: center;
+    font-family: 'Noto Serif JP', serif; }
+
+/* works */
+.gallery {
+  columns: 1;
+  /*段組みの数*/
+  padding: 0 15px;
+  /*ギャラリー左右に余白をつける*/
+  margin: 0; }
+  @media (min-width: 768px) {
+    .gallery {
+      columns: 3;
+      /*段組みの数*/ } }
+
+.gallery col-lg-12 {
+  width: 100%; }
+
+.gallery li {
+  margin-bottom: 20px;
+  /*各画像下に余白をつける*/
+  list-style: none; }
+
+/*ギャラリー内のイメージは横幅100%にする*/
+.gallery img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  /*画像の下にできる余白を削除*/ }
+
+/*もっと見る*/
+.more {
+  background: #0058B0;
+  color: #fff;
+  width: 200px;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer; }
+
+li {
+  margin: 0 0 5px; }
+
+/* contact */
+.contact__wrapper {
+  min-height: 1.7em;
+  overflow: hidden; }
+  .contact__wrapper p {
+    margin-top: 15px; }
+    .contact__wrapper p:first-child {
+      margin-top: 0; }
+  .contact__wrapper input {
+    width: 15rem;
+    height: 2rem;
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 0.2rem 1rem;
+    font-family: 'Noto Serif JP', serif; }
+  .contact__wrapper textarea {
+    width: 20rem;
+    height: 10rem;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 0.2rem 1rem;
+    font-family: 'Noto Serif JP', serif; }
+  .contact__wrapper input[type=submit] {
+    width: 5rem;
+    padding: 0;
+    font-family: 'Noto Serif JP', serif; }
+  .contact__wrapper input[type=submit]:hover {
+    opacity: 0.7; }
