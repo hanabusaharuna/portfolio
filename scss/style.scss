@@ -2,22 +2,25 @@
 
 @charset "utf-8";
 
+$sz_sp: 375px;//375px;
+$sz_tab: 900px;//タブレット用
+
 /*共通設定
 ______________________________________________*/
-$pc:768px; //pc
+$sp:375px; //pc
 
-@mixin pc {
-    @media(min-width: ($pc)) {
+@mixin sp {
+    @media(max-width: ($sp)) {
         @content;//都度適応させる
     }
 }
 
-$col:576px; //pc
+$tab: 900px;
 
-@mixin col {
-    @media(min-width: ($col)) {
-        @content;//都度適応させる
-    }
+@mixin tab {       
+  @media (max-width: ($tab)) {
+    @content;
+  }
 }
 
 /*画面全体の設定*/
@@ -220,20 +223,26 @@ _____________________________________________________________*/
     margin: 0 auto;
     display: block;
     
+    @include tab {
+            
+        }
+    
     &__wrapper {
         font-family: 'Noto Serif JP', serif;
+        width: 100%;
+        margin: 0 65px;
+        display: flex;
         
-        @include pc {
-            width: 100%;
+        @include tab {
             margin: 0 0 65px;
-            display: flex;
+            display: inline-block;
         }
     }
     
     &__r {
-        margin: 0 auto;
+        margin: 0 40px;
         
-         @include pc {
+         @include sp {
             width: 100%;
             margin: 80px 0 0 30px;
         }
@@ -241,10 +250,8 @@ _____________________________________________________________*/
     
     &__copy {
         
-         @imclude pc {
+         @include sp {
              display: inline-block;
-             margin-top: 80px;
-             margin-left: 50%;
              font-size: 2em;
              font-family: 'Noto Serif JP', serif;
         }
@@ -254,10 +261,8 @@ _____________________________________________________________*/
     &__text {
         
         
-         @imclude pc {
+         @include sp {
              width: 80%;
-             margin-top: 30px;
-             margin-left: 300px;
              font-size: 13px;
              line-height: 2.4;
              font-family: 'Noto Serif JP', serif;
@@ -282,7 +287,7 @@ _____________________________________________________________*/
         top: 15px;
     }
         
-        @imclude pc {
+        @imclude sp {
         position: absolute;
         top: 0;
         right: 0;
@@ -322,14 +327,26 @@ _____________________________________________________________*/
     
 }
     
+/* works 
+_____________________________________________________________*/
+.work {
+    margin: auto;
     
-/* works */
+    &__img {
+        width: 50%;
+    }
+}
+
+
+
+/* gallery
+_____________________________________________________________*/
 .gallery{
 columns: 1;/*段組みの数*/
 padding:0 15px;/*ギャラリー左右に余白をつける*/
 margin:0;
     
-    @include pc {
+    @include sp {
         columns: 3;/*段組みの数*/
     }
 }

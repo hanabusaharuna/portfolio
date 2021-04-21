@@ -168,33 +168,31 @@ _____________________________________________________________*/
   margin: 0 auto;
   display: block; }
   .mine__wrapper {
-    font-family: 'Noto Serif JP', serif; }
-    @media (min-width: 768px) {
+    font-family: 'Noto Serif JP', serif;
+    width: 100%;
+    margin: 0 65px;
+    display: flex; }
+    @media (max-width: 900px) {
       .mine__wrapper {
-        width: 100%;
         margin: 0 0 65px;
-        display: flex; } }
+        display: inline-block; } }
   .mine__r {
-    margin: 0 auto; }
-    @media (min-width: 768px) {
+    margin: 0 40px; }
+    @media (max-width: 375px) {
       .mine__r {
         width: 100%;
         margin: 80px 0 0 30px; } }
-@imclude pc {
-  .mine__copy {
-    display: inline-block;
-    margin-top: 80px;
-    margin-left: 50%;
-    font-size: 2em;
-    font-family: 'Noto Serif JP', serif; } }
-@imclude pc {
-  .mine__text {
-    width: 80%;
-    margin-top: 30px;
-    margin-left: 300px;
-    font-size: 13px;
-    line-height: 2.4;
-    font-family: 'Noto Serif JP', serif; } }
+  @media (max-width: 375px) {
+    .mine__copy {
+      display: inline-block;
+      font-size: 2em;
+      font-family: 'Noto Serif JP', serif; } }
+  @media (max-width: 375px) {
+    .mine__text {
+      width: 80%;
+      font-size: 13px;
+      line-height: 2.4;
+      font-family: 'Noto Serif JP', serif; } }
   .mine__l {
     text-align: center;
     position: relative; }
@@ -208,7 +206,7 @@ _____________________________________________________________*/
       border-color: #7fffd4;
       left: 0;
       top: 15px; }
-@imclude pc {
+@imclude sp {
   .mine .pc {
     position: absolute;
     top: 0;
@@ -230,14 +228,22 @@ _____________________________________________________________*/
     text-align: center;
     font-family: 'Noto Serif JP', serif; }
 
-/* works */
+/* works 
+_____________________________________________________________*/
+.work {
+  margin: auto; }
+  .work__img {
+    width: 50%; }
+
+/* gallery
+_____________________________________________________________*/
 .gallery {
   columns: 1;
   /*段組みの数*/
   padding: 0 15px;
   /*ギャラリー左右に余白をつける*/
   margin: 0; }
-  @media (min-width: 768px) {
+  @media (max-width: 375px) {
     .gallery {
       columns: 3;
       /*段組みの数*/ } }
