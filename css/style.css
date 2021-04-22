@@ -5,6 +5,7 @@ ______________________________________________*/
 body,
 html {
   height: 100%;
+  width: 100%;
   margin: 0 auto;
   letter-spacing: 2px; }
 
@@ -31,6 +32,9 @@ h2 {
   margin-top: 50px;
   margin-bottom: 50px;
   font-family: 'Dela Gothic One', cursive; }
+  @media (max-width: 375px) {
+    h2 {
+      font-size: 16px; } }
 
 h2:before {
   position: absolute;
@@ -47,9 +51,18 @@ footer {
 /*固定する背景*/
 /* .menu-btn 設定　ここから */
 .wrapper {
-  display: inline-block;
-  right: 50px;
-  margin: 10px 10px 0 0; }
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 50px; }
+  @media (max-width: 900px) {
+    .wrapper {
+      max-width: 758px;
+      padding: 0 20px; } }
+  @media (max-width: 375px) {
+    .wrapper {
+      max-width: 250px;
+      padding: 0; } }
 
 /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
 .openbtn2 {
@@ -162,37 +175,47 @@ footer {
   font-weight: bold; }
 
 /* nav 設定　ここまで */
+.firstview {
+  max-width: 100%; }
+  .firstview__view1 {
+    max-width: 100%; }
+    @media (max-width: 375px) {
+      .firstview__view1 {
+        max-width: 100%; } }
+
 /* profile
 _____________________________________________________________*/
 .mine {
   margin: 0 auto;
-  display: block; }
+  position: relative; }
   .mine__wrapper {
     font-family: 'Noto Serif JP', serif;
     width: 100%;
-    margin: 0 65px;
     display: flex; }
     @media (max-width: 900px) {
       .mine__wrapper {
-        margin: 0 0 65px;
-        display: inline-block; } }
+        flex-flow: column; } }
   .mine__r {
     margin: 0 40px; }
-    @media (max-width: 375px) {
+    @media (max-width: 900px) {
       .mine__r {
         width: 100%;
-        margin: 80px 0 0 30px; } }
-  @media (max-width: 375px) {
-    .mine__copy {
-      display: inline-block;
-      font-size: 2em;
-      font-family: 'Noto Serif JP', serif; } }
-  @media (max-width: 375px) {
-    .mine__text {
-      width: 80%;
-      font-size: 13px;
-      line-height: 2.4;
-      font-family: 'Noto Serif JP', serif; } }
+        margin: 0 auto; } }
+  .mine__copy {
+    display: inline-block;
+    font-size: 2em;
+    font-family: 'Noto Serif JP', serif; }
+    @media (max-width: 375px) {
+      .mine__copy {
+        font-size: 1em; } }
+  .mine__text {
+    margin-bottom: 150px; }
+    @media (max-width: 375px) {
+      .mine__text {
+        width: 100%;
+        font-size: 13px;
+        line-height: 2.4;
+        font-family: 'Noto Serif JP', serif; } }
   .mine__l {
     text-align: center;
     position: relative; }
@@ -206,13 +229,18 @@ _____________________________________________________________*/
       border-color: #7fffd4;
       left: 0;
       top: 15px; }
-    @media (max-width: 375px) {
-      .mine .pc {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0; } }
+
+.likes {
+  position: absolute;
+  left: 40px;
+  bottom: 40px; }
+  @media (max-width: 900px) {
+    .likes {
+      left: 0;
+      bottom: 10px; } }
+  .likes p {
+    width: 60%;
+    margin-bottom: 0; }
 
 /*skil */
 .skil {
@@ -264,15 +292,6 @@ _____________________________________________________________*/
   vertical-align: bottom;
   /*画像の下にできる余白を削除*/ }
 
-/*もっと見る*/
-.more {
-  background: #fff100;
-  color: #222;
-  width: 200px;
-  text-align: center;
-  padding: 5px;
-  cursor: pointer; }
-
 li {
   margin: 0 0 5px; }
 
@@ -292,16 +311,38 @@ li {
     padding: 0.2rem 1rem;
     font-family: 'Noto Serif JP', serif; }
   .contact__wrapper textarea {
-    width: 20rem;
+    width: 30rem;
     height: 10rem;
-    border-radius: 5px;
     background-color: #fff;
     border: 1px solid #000;
     padding: 0.2rem 1rem;
     font-family: 'Noto Serif JP', serif; }
+    @media (max-width: 900px) {
+      .contact__wrapper textarea {
+        width: 20rem; } }
+    @media (max-width: 375px) {
+      .contact__wrapper textarea {
+        width: 15rem; } }
   .contact__wrapper input[type=submit] {
     width: 5rem;
     padding: 0;
     font-family: 'Noto Serif JP', serif; }
+  .contact__wrapper .submit {
+    text-align: center; }
   .contact__wrapper input[type=submit]:hover {
     opacity: 0.7; }
+
+.contact-flex {
+  display: flex;
+  justify-content: space-around; }
+  @media (max-width: 900px) {
+    .contact-flex {
+      flex-flow: column;
+      justify-content: space-between;
+      text-align: center; } }
+
+.contact-item {
+  margin: 15px; }
+  @media (max-width: 375px) {
+    .contact-item {
+      margin: 0; } }
