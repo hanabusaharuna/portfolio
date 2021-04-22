@@ -222,6 +222,9 @@ _____________________________________________________________*/
   .mine .pc {
     margin-bottom: 50px;
     height: 250px; }
+    @media (max-width: 375px) {
+      .mine .pc {
+        height: 150px; } }
     .mine .pc .pc::after {
       content: '';
       position: absolute;
@@ -259,6 +262,12 @@ _____________________________________________________________*/
 
 /* works 
 _____________________________________________________________*/
+.work-container {
+  columns: 2;
+  padding: 0 15px;
+  /*ギャラリー左右に余白をつける*/
+  margin: 0; }
+
 .work {
   margin: auto; }
   .work__img {

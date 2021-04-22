@@ -1,0 +1,285 @@
+@charset "utf-8";
+
+/*共通部分___________________________________________________________________________________________________________*/
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+header,
+footer {
+    background-color: #01214f;
+}
+
+footer {
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+}
+
+h2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #c4f4f6;
+    background-image: url(../images/icon.png);
+    background-repeat: no-repeat;
+    background-size: irem;
+    background-position: left 20px top 45px;
+    padding-left: 25px;
+    padding: 34px 53px;
+    color: #01214c;
+}
+
+wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/*header
+___________________________________________________________________________________________________________*/
+
+.logo {
+    width: 200px;
+    margin-top: 30px;
+}
+
+.main-nav {
+    display: flex;
+    list-style: none;
+    margin: 52px 0;
+    font-size: 30px;
+}
+
+.main-nav li {
+    margin-left: 25px;
+}
+
+.main-nav a {
+    color: #fff;
+}
+
+.main-nav a:hover {
+    color: #c4f4f6;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+
+/*news
+___________________________________________________________________________________________________________*/
+
+.info {
+    margin: 151px auto;
+}
+
+.news {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: solid 3px #c4f4f6;
+    padding: 53px;
+    line-height: 1.7
+}
+
+p {
+    font-size: 20px;
+}
+
+span {
+    color: #d63636;
+}
+
+.litte {
+    font-size: 16px;
+}
+
+.bs {
+    margin-top: 1rem;
+}
+
+.while {
+    margin-bottom: 35px;
+}
+
+/*member
+___________________________________________________________________________________________________________*/
+
+.fish {
+    background-color: #0080a4;
+    padding: 50px 30px;
+    margin: 151px 0 auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.member {
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: solid 3px #c4f4f6;
+    padding: 53px;
+}
+
+.item {
+    text-align: center;
+}
+
+/*money
+___________________________________________________________________________________________________________*/
+
+.money {
+    background-image: url(../images/fish-bg.png);
+    background-repeat: repeat;
+    margin: auto;
+    padding: 151px 10%;
+}
+
+.fee {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: solid 3px #c4f4f6;
+    padding: 53px;
+    background-color: #fff;
+}
+
+table {
+    width: 100%;
+}
+
+table,
+td,
+th {
+    border-collapse: collapse;
+    border: 2px #808080 solid;
+    color: #333;
+    font-size: 24px;
+    padding: 20px;
+}
+
+th {
+    background: rgba(196, 244, 246, .2);
+    text-align: center;
+    width: 45%;
+}
+
+td {
+    text-align: right;
+}
+
+small {
+    font-size: 15px;
+    color: #333;
+}
+
+
+/*モバイル版
+___________________________________________________________________________________________________________*/
+
+@media (max-width: 768px) {
+
+    h2 {
+        max-width: 667px;
+        background-position: left 25px top 30px;
+        padding-left: 15px;
+        padding: 25px 53px;
+        font-size: 1em;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+    /*header*/
+    
+    .logo {
+        width: 200px;
+        margin: 43px auto;
+    }
+    
+    .page-header {
+        font-size: 24px;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+
+    .main-nav {
+        margin: 0 0 35px;
+        font-size: 24px;
+    }
+
+    
+    a {
+        display: inline-block;
+    }
+
+    /*news*/
+    .news {
+        max-width: 667px;
+        margin: 0 auto;
+        border: solid 3px #c4f4f6;
+        padding: 53px;
+        line-height: 1.7
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .litte {
+        font-size: 14px;
+    }
+
+    /*member*/
+    .flex {
+        font-size: 24px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item:first-child {
+        margin-top: 0;
+    }
+
+    .item {
+        margin-top: 55px;
+    }
+
+    .while {
+        text-align: center;
+    }
+
+    /*money*/
+
+    table,
+    td,
+    th {
+        font-size: 18px;
+        padding: 17px;
+    }
+
+}
