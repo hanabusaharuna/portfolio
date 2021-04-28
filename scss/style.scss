@@ -233,7 +233,11 @@ footer {
 
 
 .firstview {
+    height: 100vh;
     max-width: 100%;
+    background-image: url("../images/first3.png");
+    background-size: 98%;
+    background-position: center;
     
     &__view1 {
         max-width: 100%;

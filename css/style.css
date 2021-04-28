@@ -176,7 +176,11 @@ footer {
 
 /* nav 設定　ここまで */
 .firstview {
-  max-width: 100%; }
+  height: 100vh;
+  max-width: 100%;
+  background-image: url("../images/first3.png");
+  background-size: 98%;
+  background-position: center; }
   .firstview__view1 {
     max-width: 100%; }
     @media (max-width: 375px) {
