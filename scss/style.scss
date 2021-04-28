@@ -258,7 +258,11 @@ _____________________________________________________________*/
     &__wrapper {
         font-family: 'Noto Serif JP', serif;
         width: 100%;
+        height: 600px;
         display: flex;
+        background-image: url("../images/like.png");
+        background-size: auto 300px;
+        background-position: bottom -100px right;
         
         @include tab {
             flex-flow: column;
@@ -374,9 +378,16 @@ _____________________________________________________________*/
 /* works 
 _____________________________________________________________*/
 .work-container {
+    display: flex;
     columns: 2;
     padding:0 15px;/*ギャラリー左右に余白をつける*/
     margin:0;
+    text-align: center;
+    
+    @include tab {
+        display: block;
+        columns:  1;/*段組みの数*/
+    }
 }
 
 .work {
