@@ -238,13 +238,10 @@ footer {
     background-image: url("../images/first3.png");
     background-size: 98%;
     background-position: center;
-    
-    &__view1 {
-        max-width: 100%;
         
-        @include sp {
-            max-width: 100%;
-        }
+        @include tab {
+            background-image: url("../images/first3-t.png");
+            background-size: 100vh 100vh;
     }
 }
 

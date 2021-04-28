@@ -181,11 +181,10 @@ footer {
   background-image: url("../images/first3.png");
   background-size: 98%;
   background-position: center; }
-  .firstview__view1 {
-    max-width: 100%; }
-    @media (max-width: 375px) {
-      .firstview__view1 {
-        max-width: 100%; } }
+  @media (max-width: 900px) {
+    .firstview {
+      background-image: url("../images/first3-t.png");
+      background-size: 100vh 100vh; } }
 
 /* profile
 _____________________________________________________________*/
