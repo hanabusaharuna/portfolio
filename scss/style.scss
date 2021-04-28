@@ -259,6 +259,12 @@ _____________________________________________________________*/
         background-position: 45% 100%;
         }
     
+    @include sp {
+        height: 1200px;
+            background-size: auto 100px;
+            background-position: 100px 1050px;
+        }
+    
     &__wrapper {
         font-family: 'Noto Serif JP', serif;
         width: 100%;
@@ -338,13 +344,13 @@ _____________________________________________________________*/
         } 
     
     p {
-        margin-bottom: 0;
+        margin-bottom: -30px;
         font-size: 13px;
         line-height: 2.4;
         font-family: 'Noto Serif JP', serif;
         
        @include sp {
-        
+            margin-bottom: -20px;
         } 
     }
     
