@@ -193,7 +193,8 @@ _____________________________________________________________*/
   background-position: bottom -10% right 25%; }
   @media (max-width: 900px) {
     .mine {
-      height: 1250px; } }
+      height: 1150px;
+      background-position: 45% 100%; } }
   .mine__wrapper {
     font-family: 'Noto Serif JP', serif;
     width: 100%;
@@ -217,13 +218,10 @@ _____________________________________________________________*/
       .mine__copy {
         font-size: 1em; } }
   .mine__text {
-    margin-bottom: 150px; }
-    @media (max-width: 375px) {
-      .mine__text {
-        width: 100%;
-        font-size: 13px;
-        line-height: 2.4;
-        font-family: 'Noto Serif JP', serif; } }
+    width: 100%;
+    font-size: 13px;
+    line-height: 2.4;
+    font-family: 'Noto Serif JP', serif; }
   .mine__l {
     text-align: center;
     position: relative; }
@@ -250,8 +248,10 @@ _____________________________________________________________*/
       left: 0;
       bottom: 10px; } }
   .likes p {
-    width: 60%;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-size: 13px;
+    line-height: 2.4;
+    font-family: 'Noto Serif JP', serif; }
 
 /*skil */
 .skil {

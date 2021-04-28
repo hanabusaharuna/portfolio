@@ -255,7 +255,8 @@ _____________________________________________________________*/
     background-position: bottom -10% right 25%;
     
     @include tab {
-            height: 1250px;
+            height: 1150px;
+        background-position: 45% 100%;
         }
     
     &__wrapper {
@@ -291,13 +292,13 @@ _____________________________________________________________*/
     
     
     &__text {
-        margin-bottom: 150px;
-        
-         @include sp {
-             width: 100%;
+            width: 100%;
              font-size: 13px;
              line-height: 2.4;
              font-family: 'Noto Serif JP', serif;
+        
+         @include sp {
+             
         }
 } 
     
@@ -337,8 +338,10 @@ _____________________________________________________________*/
         } 
     
     p {
-        width: 60%;
         margin-bottom: 0;
+        font-size: 13px;
+        line-height: 2.4;
+        font-family: 'Noto Serif JP', serif;
         
        @include sp {
         
